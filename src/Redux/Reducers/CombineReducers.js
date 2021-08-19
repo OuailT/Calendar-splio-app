@@ -6,5 +6,5 @@ import { SetEventReducer, trackDaysReducer, removeEventReducer } from "./EventsR
 export const reducers = combineReducers({
     allEvents : SetEventReducer,
     allDays : trackDaysReducer,
-    removeEvents:removeEventReducer, 
+    removeEvents:removeEventReducer,
 });

@@ -21,6 +21,7 @@ export const trackDays = (days) => {
 export const RemoveEvent = (id) => {
     return {
         type : ActionsTypes.REMOVE_EVENT,
+        payload: id,
     };
 };
 

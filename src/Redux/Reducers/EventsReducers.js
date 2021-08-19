@@ -1,9 +1,5 @@
 import { ActionsTypes } from "../Constant/ActionsTypes";
 
-
-//Reducers take initial state and function who takes two argument(state, action)
-
-
 const initialState = {
     events : [],
     days : (""),
@@ -30,14 +26,13 @@ export const trackDaysReducer = (state= initialState, action) => {
     }
 };
 
-export const removeEventReducer = (state = initialState,action) => {
+export const removeEventReducer = (state = initialState, action) => {
     switch(action.type) {
       case ActionsTypes.REMOVE_EVENT : 
-            return {... state, events : events.filter((event) => event.id !== action.payload)} // payload = id in this case
+            return {... state, events : state.events.filter((event) => event.id !== action.payload)}
       default : 
         return state;
     }
-
 };
 
 
